@@ -14,3 +14,27 @@ const getComputerChoice = function () {
 };
 
 // console.log(getComputerChoice());
+
+//---------------------
+//function return user input choice
+//---------------------
+
+const getHumanChoice = function () {
+  let choice = prompt("rock, paper, or scissors");
+  if (choice === "rock") {
+    return "rock";
+  } else if (choice === "paper") {
+    return "paper";
+  } else if (choice === "scissors") {
+    return "scissors";
+  } else {
+    //-------------------------
+    //Infinite prompt loop bug
+    //-------------------------
+    // while (choice != "rock" && choice != "paper" && choice != "scissors") {
+    //   prompt("not a valid choice, rock, paper, or scissors");
+    // }
+  }
+};
+
+// console.log(getHumanChoice());
