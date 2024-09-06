@@ -24,14 +24,15 @@ const getHumanChoice = function () {
 
   while (choice !== "rock" || choice !== "paper" || choice !== "scissors") {
     choice = prompt("rock, paper, or scissors");
-    if (choice === "rock") {
+    if (choice.toLowerCase() === "rock") {
       return "rock";
-    } else if (choice === "paper") {
+    } else if (choice.toLowerCase() === "paper") {
       return "paper";
-    } else if (choice === "scissors") {
+    } else if (choice.toLowerCase() === "scissors") {
       return "scissors";
     }
   }
+
   // if (choice === "rock") {
   //   return "rock";
   // } else if (choice === "paper") {
@@ -47,9 +48,7 @@ const getHumanChoice = function () {
   //   // }
   // }
 };
-//-------------------------
-//Infinite prompt loop bug
-//-------------------------
+
 // };
 
 // console.log(getHumanChoice());
