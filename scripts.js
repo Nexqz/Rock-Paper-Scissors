@@ -20,22 +20,37 @@ const getComputerChoice = function () {
 //---------------------
 
 const getHumanChoice = function () {
-  let choice = prompt("rock, paper, or scissors");
-  if (choice === "rock") {
-    return "rock";
-  } else if (choice === "paper") {
-    return "paper";
-  } else if (choice === "scissors") {
-    return "scissors";
-  } else {
-    //-------------------------
-    //Infinite prompt loop bug
-    //-------------------------
-    // while (choice != "rock" && choice != "paper" && choice != "scissors") {
-    //   prompt("not a valid choice, rock, paper, or scissors");
-    // }
+  let choice;
+
+  while (choice !== "rock" || choice !== "paper" || choice !== "scissors") {
+    choice = prompt("rock, paper, or scissors");
+    if (choice === "rock") {
+      return "rock";
+    } else if (choice === "paper") {
+      return "paper";
+    } else if (choice === "scissors") {
+      return "scissors";
+    }
   }
+  // if (choice === "rock") {
+  //   return "rock";
+  // } else if (choice === "paper") {
+  //   return "paper";
+  // } else if (choice === "scissors") {
+  //   return "scissors";
+  // } else {
+  //   // while (choice != "rock" || choice != "paper" || choice != "scissors") {
+  //   //   prompt("not a valid choice, rock, paper, or scissors");
+  //   //   if (choice === "rock" || choice === "paper" || choice === "scissors") {
+  //   //     break;
+  //   //   }
+  //   // }
+  // }
 };
+//-------------------------
+//Infinite prompt loop bug
+//-------------------------
+// };
 
 // console.log(getHumanChoice());
 
@@ -77,3 +92,7 @@ console.log(`computer choose ${computerSelection}`);
 playRound(humanSelection, computerSelection);
 console.log(`player score: ${humanScore}`);
 console.log(`computer score: ${computerScore}`);
+
+//---------------------
+//function for multiple rounds
+//--------------------
